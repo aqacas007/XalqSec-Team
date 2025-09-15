@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="az">
+<head>
+  <meta charset="utf-8">
+  <title>XalqCorp — Web Studio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/style.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+<nav class="navbar navbar-dark bg-transparent py-3">
+  <div class="container d-flex align-items-center justify-content-between">
+    <a class="navbar-brand fs-4 fw-semibold" href="/">XalqCorp</a>
+    <div class="d-flex align-items-center gap-3">
+
+      
+    </div>
+  </div>
+</nav>
+
+<header class="hero-wrap">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <span class="badge bg-primary-subtle text-primary fw-medium px-3 py-2 mb-3 border border-primary">
+          Azərbaycanın #1 Web Dizayn Studiyası
+        </span>
+        <h1 class="display-4 fw-bold hero-title">
+          Biznesinizi Rəqəmsal Dünyada <span class="text-primary">Lider Edin</span>
+        </h1>
+        <p class="lead text-secondary mb-4">
+          Performans yönümlü veb həllər — dizayn, SEO və dəstək bir yerdə.
+        </p>
+        <div class="d-flex gap-3">
+          <a class="btn btn-primary btn-lg px-4" href="#contact">Qiyməti hesablayın</a>
+          <a class="btn btn-outline-light btn-lg px-4" href="/support">Canlı dəstək</a>
+        </div>
+        <div class="d-flex gap-4 mt-4 small text-secondary">
+          <div>✅ 150+ tamamlanmış layihə</div>
+          <div>⭐ 4.9/5 müştəri məmnuniyyəti</div>
+          <div>📈 35% orta satış artımı</div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="card-dark rounded-4 shadow-xl p-4">
+          <h4 class="mb-3">Layihə Qiymət Kalkulyatoru</h4>
+          <div class="text-secondary small mb-3">Demo panel — funksional deyil</div>
+          <div class="border rounded-4 p-4 text-center">
+            <div class="display-3 fw-bold">₼ 0</div>
+            <div class="text-secondary small">*ƏDV daxil deyil</div>
+          </div>
+          <div class="d-grid gap-2 mt-3">
+            <button class="btn btn-outline-light btn-sm" type="button">Sürət optimallaşdırması</button>
+            <button class="btn btn-outline-light btn-sm" type="button">Səhifədaxili SEO</button>
+            <button class="btn btn-outline-light btn-sm" type="button" href="/XtO42m7vSYSwHsrOf0WYYFl/login">Admin panel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="py-5">
+  <div class="container">
+    <h3 class="mb-3">Əlaqə forması</h3>
+    <p class="text-secondary small mb-4">Satış komandamız 24 saat ərzində cavab verir.</p>
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <form method="POST" autocomplete="off" novalidate class="contact-form card-dark p-4 rounded-4">
+          <input class="form-control mb-3" name="name" placeholder="Ad Soyad" required>
+          <input class="form-control mb-3" name="email" placeholder="E-poçt" type="email" required>
+          <input type="text" name="company_id" style="position:absolute;left:-9999px;top:-9999px" tabindex="-1" autocomplete="off">
+          <textarea class="form-control mb-3" name="message" rows="5" placeholder="Mesajınız"></textarea>
+          <button class="btn btn-primary px-4" type="submit">Göndər</button>
+          {% if msg %}<div class="alert alert-{{ msg_class }} mt-3">{{ msg }}</div>{% endif %}
+          <div class="small text-secondary mt-2">* Qeyd: Mesajınız təhlükəsizlik yoxlamasından keçdikdən sonra yönləndirilir.</div>
+        </form>
+      </div>
+      <div class="col-lg-5">
+        <div class="card-dark rounded-4 p-4 h-100">
+          <h5 class="mb-2">Niyə bizi seçirlər?</h5>
+          <ul class="list-unstyled text-secondary small m-0">
+            <li class="mb-2">• Yüksək performanslı frontend</li>
+            <li class="mb-2">• SEO yönümlü arxitektura</li>
+            <li class="mb-2">• Effektiv dəstək və SLA</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- support modal removed -->
+<!--
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z"/>
+  </svg>
+</button>
+
+<div id="support-modal" class="support-modal">
+  <div class="support-content">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h6 class="m-0">Canlı dəstək</h6>
+      <button id="close-support" class="btn-close btn-close-white" aria-label="Bağla"></button>
+    </div>
+    <p class="small text-secondary mb-3">Xoş gəlmisiniz! Hansı mövzu üzrə yazırsınız?</p>
+
+    <div class="d-grid gap-2 mb-3">
+      <button type="button" class="btn btn-success w-100">💼 Satış</button>
+      <button type="button" class="btn btn-info w-100">🛠️ Texniki dəstək</button>
+    </div>
+
+    <form id="supportForm" autocomplete="off">
+      <textarea class="form-control mb-2" name="q" rows="3" placeholder="Mesajınızı yazın..."></textarea>
+      <button type="submit" class="btn btn-primary w-100">Göndər</button>
+    </form>
+    <div id="supportResult" class="small mt-2 text-secondary"></div>
+
+    <hr class="border-secondary my-3">
+    <div class="small text-secondary">Qabaqcıl axtarış (demo):</div>
+    <form id="findForm" class="mt-2">
+      <div class="input-group">
+        <input class="form-control" name="q" placeholder="Mövzu/istifadəçi/email">
+        <button class="btn btn-outline-light" type="submit">Axtar</button>
+      </div>
+    </form>
+    <div id="findResult" class="small mt-2 text-secondary"></div>
+  </div>
+</div>
+
+<script>
+  const btn = document.getElementById('support-btn');
+  const modal = document.getElementById('support-modal');
+  const closeBtn = document.getElementById('close-support');
+  const form = document.getElementById('supportForm');
+  const result = document.getElementById('supportResult');
+  const findForm = document.getElementById('findForm');
+  const findResult = document.getElementById('findResult');
+
+  btn.onclick = () => { modal.style.display = "flex"; result.textContent = ""; findResult.textContent=""; };
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    result.textContent = "Göndərilir...";
+    const fd = new FormData(form);
+    try {
+      const res = await fetch('/api/support/search', { method: 'POST', body: fd });
+      const data = await res.json();
+      result.innerHTML = data.ok ? `Tapılan müraciət sayı: <b>${data.count}</b>` : 'Xəta baş verdi.';
+    } catch (err) { result.textContent = "Server cavab vermədi."; }
+  });
+
+  findForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    findResult.textContent = "Axtarılır...";
+    const fd = new FormData(findForm);
+    try {
+      const res = await fetch('/api/support/find', { method: 'POST', body: fd });
+      const data = await res.json();
+      if (data.ok && data.results) {
+        findResult.innerHTML = data.results.length
+          ? `<ul class="m-0 mt-1">${data.results.map(r=>`<li>#${r.id} — <b>${r.author}</b>: ${r.subject}</li>`).join('')}</ul>`
+          : 'Nəticə tapılmadı.';
+      } else {
+        findResult.textContent = 'Xəta baş verdi.';
+      }
+    } catch (err) { findResult.textContent = "Server cavab vermədi."; }
+  });
+</body>
+</html>
